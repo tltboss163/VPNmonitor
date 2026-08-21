@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">VPN Monitor</string>
+    <string name="overlay_channel_name">VPN Monitor Overlay</string>
+    <string name="overlay_channel_desc">Фоновый мониторинг VLESS/XHTTP соединений</string>
+    <string name="accessibility_watchdog_desc">VPN Monitor Watchdog: отслеживает бездействие пульта и автоматически показывает заставку. Не собирает и не передаёт данные.</string>
+</resources>

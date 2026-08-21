@@ -1,0 +1,23 @@
+# Build
+build/
+.gradle/
+*.apk
+*.ap_
+*.dex
+
+# IDE
+.idea/
+*.iml
+local.properties
+
+# OpenCode / Agent
+.opencode/
+.codegraph/
+.omo/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Generated
+classes.jar

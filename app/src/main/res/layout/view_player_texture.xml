@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  PlayerView с TextureView вместо SurfaceView.
+
+  На MTK-ТВ (Android 10/12) SurfaceView-путь не даёт кадров: ACodec не может
+  переключить выходной порт в DynamicANWBuffer (err -1010) даже для Google
+  SW-декодера, кодек молчит (0 сэмплов). TextureView использует SurfaceTexture
+  (GPU-потребитель, принимает YUV-форматы) — обходит сломанный на MTK
+  surface-путь SurfaceFlinger. surface_type задаётся ТОЛЬКО через XML-атрибут
+  PlayerView (media3 1.3.1 не имеет программного setVideoTextureView).
+-->
+<androidx.media3.ui.PlayerView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/player_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:surface_type="texture_view"
+    app:use_controller="false"
+    app:resize_mode="zoom" />
